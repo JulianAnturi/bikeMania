@@ -1,13 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const bcrypt = require("bcryptjs");
-const authService = require('./services/authService');
-
-
-const User = require("../models/User");
-
-// Example usage of the User model
-// const userId = User.create({ username: "userTest", password: "password123" });
-// console.log(`User created with ID: ${userId}`);
+const authService = require('./services/AuthService');
 
 const createWindow = () => {
     const win = new BrowserWindow({

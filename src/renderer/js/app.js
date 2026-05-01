@@ -8,7 +8,7 @@ async function login() {
     const result = await ipcRenderer.invoke('login', { username, password });
 
     if (result.success) {
-        alert('✅ Login exitoso');
+        window.location.href = 'dashboard/dashboard.html';
     } else {
         document.getElementById('error').innerText = result.message;
     }
