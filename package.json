@@ -1,6 +1,6 @@
 {
-  "name": "electron + react forge",
-  "productName": "electron + react forge",
+  "name": "electron",
+  "productName": "electron",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".vite/build/main.js",
@@ -29,10 +29,11 @@
     "@electron-forge/plugin-fuses": "^7.11.2",
     "@electron-forge/plugin-vite": "^7.11.2",
     "@electron/fuses": "^1.8.0",
-    "electron": "42.2.0",
+    "electron": "^38.8.6",
     "vite": "^8.0.14"
   },
   "dependencies": {
+    "better-sqlite3": "^12.10.0",
     "bootstrap": "^5.3.8",
     "bootswatch": "^5.3.8",
     "electron-squirrel-startup": "^1.0.1",

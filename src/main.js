@@ -1,7 +1,8 @@
 import { app, BrowserWindow } from 'electron';
+import './ipc/ownerHandler.js';
 import path from 'node:path';
 import started from 'electron-squirrel-startup';
-
+import db from './database/database.js';
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (started) {
   app.quit();
@@ -15,7 +16,7 @@ const createWindow = () => {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
-  
+
   });
   mainWindow.setMenu(null);
 

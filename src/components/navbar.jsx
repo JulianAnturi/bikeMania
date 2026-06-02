@@ -4,7 +4,7 @@ export default function Navbar({ setPage }) {
       <div className="container-fluid">
 
         <a className="navbar-brand" href="#">
-          <h5 class="mb-0">🏍️ CRAZY WHEELS </h5>
+          <h5 className="mb-0">🏍️ CRAZY WHEELS </h5>
         </a>
 
         <button
@@ -25,15 +25,15 @@ export default function Navbar({ setPage }) {
                 Usuarios
               </button>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Motocicletas</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#" onClick={() => setPage('bikes')}>Registrar motocicleta</a>
-                <a class="dropdown-item" href="#" onClick={() => setPage('bikes')}>registrar aceites</a>
-                <a class="dropdown-item" href="#" onClick={() => setPage('bikes')}>registrar marca</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Motocicletas</a>
+              <div className="dropdown-menu">
+                <a className="dropdown-item" href="#" onClick={() => setPage('bikes')}>Registrar motocicleta</a>
+                <a className="dropdown-item" href="#" onClick={() => setPage('bikes')}>registrar aceites</a>
+                <a className="dropdown-item" href="#" onClick={() => setPage('bikes')}>registrar marca</a>
+                <a className="dropdown-item" href="#">Something else here</a>
+                <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Separated link</a>
               </div>
             </li>
             <li className="nav-item">
