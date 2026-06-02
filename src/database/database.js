@@ -1,5 +1,11 @@
-const Database = require("better-sqlite3");
+// import Database from "sqlite3";
+// const Database = require("sqlite3");
+// const sqlite3 = require('sqlite3').verbose();
+// import sqlite3 from "sqlite3";
+// const db = require("better-sqlite3")("my-database.db", { verbose: console.log });
+import Database from "better-sqlite3";
 const db = new Database("my-database.db", { verbose: console.log });
+// const db = new sqlite3.Database("my-database.db", { verbose: console.log });
 
 db.pragma("foreign_keys = ON");
 
@@ -327,4 +333,4 @@ db.prepare(`CREATE TABLE IF NOT EXISTS pending_sync (
 
 // console.log("Database initialized and users table created if it didn't exist.");
 
-module.exports = db;
+export default db;
