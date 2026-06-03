@@ -5,5 +5,6 @@ import { contextBridge, ipcRenderer } from 'electron';
 
 contextBridge.exposeInMainWorld('api', {
     createOwner: (createOwnerData) => ipcRenderer.invoke('create-owner', createOwnerData),
-    getocreateOwners: () => ipcRenderer.invoke('get-owners'),
+    getOwners: () => ipcRenderer.invoke('get-owners'),
+    deleteOwner: (ownerId) => ipcRenderer.invoke('delete-owner', ownerId)
 });

@@ -1,6 +1,14 @@
 import { ipcMain } from 'electron';
-import { createOwnerController } from '../controllers/ownerController.js';
+import { createOwner, getAllOwners, deleteOwner } from '../controllers/ownerController.js';
 
 ipcMain.handle('create-owner', async (e, ownerData) => {
-  return createOwnerController(ownerData);
+  return createOwner(ownerData);
+});
+
+ipcMain.handle('get-owners', () => {
+  return getAllOwners();
+});
+
+ipcMain.handle('delete-owner', (e, ownerId) => {
+  return deleteOwner(ownerId);
 });

@@ -2,7 +2,7 @@
 // import { createOwnerController } from "../controllers/ownerController";
 // const ownerController = new OwnerController();
 import { useState } from "react";
-export default function owners() {
+export default function createOwners() {
   const [form, setForm] = useState({
     name: "",
     last_name: "",

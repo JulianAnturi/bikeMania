@@ -21,7 +21,7 @@ export default function Navbar({ setPage }) {
           <ul className="navbar-nav me-auto">
 
             <li className="nav-item">
-              <button className="btn btn-primary" onClick={() => setPage('users')}>
+              <button className="btn btn-primary" onClick={() => setPage('owners')}>
                 Usuarios
               </button>
             </li>

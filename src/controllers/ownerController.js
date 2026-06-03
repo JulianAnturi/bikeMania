@@ -2,7 +2,7 @@ import * as ownerService from '../services/ownerService.js';
 
 // export class OwnerController {
 
-  export function createOwnerController(ownerData) {
+  export function createOwner(ownerData) {
     try {
       const id =  ownerService.registerOwner(ownerData);
       return {
@@ -19,6 +19,37 @@ import * as ownerService from '../services/ownerService.js';
     }
   }
 
+  export function getAllOwners(ownerData) {
+    try {
+     const owners =  ownerService.getAllOwners(ownerData);
+      return {
+        success: true,
+        owners
+      };
+
+    } catch (error) {
+
+      return {
+        success: false,
+        message: error.message
+      };
+    }
+  }
+
+  export function deleteOwner(ownerId){
+    try{
+      const id =  ownerService.deleteOwner(ownerId);
+      return {
+        success: true,
+        id
+      };
+    }catch (error) {
+      return {
+        success: false,
+        message: error.message
+      };
+    }
+  }
 
 // }
 

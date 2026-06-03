@@ -9,3 +9,11 @@ export function registerOwner(ownerData) {
 
   return userRepository.createOwner(ownerData);
 }
+
+export function getAllOwners() {
+  return userRepository.getAllOwners();
+}
+
+export function deleteOwner(ownerId) {
+  return userRepository.deleteOwner(ownerId);
+}

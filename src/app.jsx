@@ -1,16 +1,18 @@
 import Navbar from "./components/navbar"
-import Owners from "./pages/Owners"
+import CreateOwners from "./pages/Owners/Create"
+import Owners from "./pages/Owners/Index"
 import Bikes from "./pages/Bikes"
-import React from "react"
+import {useState} from "react"
 
 export default function App() {
-  const [page, setPage] = React.useState('owners')
+  const [page, setPage] = useState('owners')
   return (
     <>
       <Navbar setPage={setPage} />
 
       <div className="container mt-4">
-        {page === 'owners' && <Owners />}
+        {page === 'owners' && <Owners setPage={setPage} />}
+        {page === 'createOwners' && <CreateOwners />}
         {page === 'bikes' && <Bikes />}
       </div>
     </>

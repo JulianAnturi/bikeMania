@@ -34,3 +34,16 @@ export function createOwner(ownerData) {
 
   return result.lastInsertRowid;
 }
+
+export function getAllOwners() {
+  const stmt = db.prepare('SELECT * FROM owners');
+  const owners = stmt.all();
+  console.log(owners);
+  return owners;
+}
+
+export function deleteOwner(ownerId) {
+  const stmt = db.prepare('DELETE FROM owners WHERE id = ?');
+  const result = stmt.run(ownerId);
+  return result.changes;
+}
